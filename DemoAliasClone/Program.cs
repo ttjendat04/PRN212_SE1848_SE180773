@@ -39,3 +39,45 @@ c3 = c1;
 
 // Không có thu hồi ô nhớ của c3 đang quản lý ở dòng 36
 
+Product p1 = new Product { Id =1, Name = "P1", Quantity = 10, Price = 20 };
+Product p2 = new Product { Id = 2, Name = "P2", Quantity = 15, Price = 22 };
+
+p1 = p2;
+
+Console.WriteLine("---Thông tin của p1----");
+Console.WriteLine(p1);
+Console.WriteLine("---Thông tin của p2----");
+Console.WriteLine(p2);
+
+p2.Name = "Thuốc trị hôi nách";
+p2.Quantity = 50;
+p2.Price = 100;
+
+Console.WriteLine("---Thông tin của p1 khi p2 đổi---:");
+Console.WriteLine(p1);
+
+Product p3 = new Product { Id = 3, Name = "P3", Quantity = 15, Price = 22 };
+Product p4 = new Product { Id = 4, Name = "P4", Quantity = 20, Price = 30 };
+
+Product p5 = p3;
+p3 = p4;
+// Hệ điều hành có thu hồi ô nhớ đã cấp phát cho p3 quản lý trước đó hay không? Vì sao? (Không)
+// nếu bổ sung:
+
+p5 = p3;
+// Thì Hệ điều hành sẽ thu hồi ô nhớ đã cấp phát cho p3 quản lý trước đó
+
+Product p6 = p4.Clone();
+//HĐH sao chép toàn bộ dữ liệu trong ô nhớ mà p4 đang quản lý qua 1 ô nhớ mới
+//và giao cho p6 quản lý ô nhớ mới này:
+//p4 và p6 quản lý 2 ô nhớ khác nhau hoàn toàn, nhưng có giá trị giống nhau
+//==>p6 đổi ko liên can p4, và ngược lại
+Console.WriteLine("Thông tin của p4:");
+Console.WriteLine(p4);
+Console.WriteLine("Thông tin của p6:");
+Console.WriteLine(p6);
+p4.Name = "Thuốc trị xàm";
+Console.WriteLine("Thông tin của p4:");
+Console.WriteLine(p4);
+Console.WriteLine("Thông tin của p6:");
+Console.WriteLine(p6);
