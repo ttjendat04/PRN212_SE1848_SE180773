@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BaiTap1"
         mc:Ignorable="d"
-        Title="Tổng 2 số" Height="2000" Width="300">
+        Title="Trần Tiến Đạt SE180773" Height="2000" Width="300">
     <StackPanel Margin="10">
         <Label Target="{Binding ElementName=txtA}">Hệ Số _a:</Label>
         <TextBox Name="txtA" />
