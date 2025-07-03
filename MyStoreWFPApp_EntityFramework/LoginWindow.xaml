@@ -1,0 +1,28 @@
+﻿<Window x:Class="MyStoreWFPApp_EntityFramework.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyStoreWFPApp_EntityFramework"
+        mc:Ignorable="d"
+        Title="Đăng nhập hệ thống" Height="450" Width="800">
+    <Grid>
+        <Label Content="  Đăng nhập hệ thống" HorizontalAlignment="Left" Margin="256,45,0,0" VerticalAlignment="Top" Width="250" Height="45" Foreground="#FF111B5B" FontWeight="Bold" FontSize="22">
+            <Label.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="Yellow" Offset="0.0"/>
+                    <GradientStop Color="Red" Offset="0.5"/>
+                    <GradientStop Color="Green" Offset="1.0"/>
+
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <Label Content="Email" FontSize="20" HorizontalAlignment="Left" Margin="96,184,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtEmail" FontSize="20" HorizontalAlignment="Left" Margin="206,184,0,0" TextWrapping="Wrap" Text="admin@CompanyName.com" VerticalAlignment="Top" Width="351"/>
+        <Label Content="Password" FontSize="20" HorizontalAlignment="Left" Margin="96,256,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnDangNhap" Content="Đăng nhập" HorizontalAlignment="Left" Height="34" Margin="175,339,0,0" VerticalAlignment="Top" Width="131" Click="btnDangNhap_Click"/>
+        <Button x:Name="btnThoat" Content="Thoát" HorizontalAlignment="Left" Height="34" Margin="400,339,0,0" VerticalAlignment="Top" Width="125"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Height="37" Password="@01"  Margin="206,256,0,0" VerticalAlignment="Top" Width="351"/>
+
+    </Grid>
+</Window>
